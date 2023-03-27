@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
+import Contexto from "./contexts/Contexto";
+import A from "./components/A";
 
-const Contexto = createContext<Props>({} as Props);
 function App() {
   const [nome, setNome] = useState("Bruna");
   const [idade, setIdade] = useState("20");
@@ -26,27 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-function A() {
-  return <B />
-}
-
-function B() {
-  return <C />
-}
-
-interface Props {
-  nome: string,
-  idade: string
-}
-
-function C() {
-  const {nome,idade} = useContext(Contexto);
-  return (
-    <>
-      <br></br><br></br>Nome: {nome}<br></br>      
-      Idade: {idade}
-    </>
-  )
-}
