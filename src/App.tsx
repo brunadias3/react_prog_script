@@ -1,10 +1,8 @@
 import { createContext, useContext, useState } from "react";
-import Contexto from "./contexts/Contexto";
+import { Contexto } from "./contexts/index";
 import A from "./components/A";
 
 function App() {
-  const [nome, setNome] = useState("Bruna");
-  const [idade, setIdade] = useState("20");
   return (
     <Contexto.Provider value={{nome,idade}}>
       <div>      

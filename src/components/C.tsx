@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Contexto from "../contexts/Contexto";
+import { Contexto } from "../contexts/index";
 
 export default function C() {
     const {nome,idade} = useContext(Contexto);
